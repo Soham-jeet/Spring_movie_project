@@ -29,8 +29,8 @@ public class DemoApplication {
 		//Insert 
 		MovieDTO dto = new MovieDTO("BNC",LocalDate.now(),LocalDateTime.now());
 		List<DirectorDTO> directorList = Arrays.asList(
-				new DirectorDTO("dse", "hgr", "West Bengal","dse@outlook.com",9008274236L),
-				new DirectorDTO("abc","wyz","Mysore","john@infosys.com",9412341736L)
+				new DirectorDTO("rst", "hgr", "Bihar","rst@infy.com",9007567890L),
+				new DirectorDTO("xyz","wyz","Mysore","john@infosys.com",9412340645L)
 				);
         service.searchBasedOnTitle("ABC");
         //Get all names of Director from movie title
@@ -38,7 +38,7 @@ public class DemoApplication {
         service.getDirectorListFromTitle("ABC");
         //Get all Movies from Director Name
         System.out.println("GET ALL MOVIES FROM DIRECTOR NAME");
-        service.getMovieListFromDirectorName("abc");
+        service.getMovieListFromDirectorName("xyz");
         //Get All movies
         System.out.println(service.displayAll().toString());       
 	}
