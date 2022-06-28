@@ -37,7 +37,7 @@ public class MovieService implements MovieServiceI{
 	
 		try {
 			
-			System.out.println("========INSERT EXECUTION======");
+			System.out.println("INSERT EXECUTION");
 			
 			//check for unique Movie title
 			Optional<Movie> movieCheck = movieRepo.findByMovie_Title(dto.getMovie_Title());
@@ -71,7 +71,7 @@ public class MovieService implements MovieServiceI{
 	@Override
 	public void searchBasedOnTitle(String title) {
 		// TODO Auto-generated method stub
-		System.out.println("=========SEARCH RESULT  (Searching for "+title+")==========");
+		System.out.println("SEARCH RESULT  (Searching for "+title+")");
 		try {
 			
 			List<Movie> movieList = movieRepo.findByMovie_TitleLike(title);
@@ -92,7 +92,7 @@ public class MovieService implements MovieServiceI{
 	@Override
 	public void updateReleaseDate(LocalDate releaseDate, String movieTitle) {
 		// TODO Auto-generated method stub
-	   System.out.println("=========UPDATE==========");
+	   System.out.println("UPDATE");
 		try {
 			
 	
@@ -131,7 +131,7 @@ public class MovieService implements MovieServiceI{
 	@Override
 	public List<Movie> displayAll() {
 		
-        System.out.println("=====================Displaying All Movies================");
+        System.out.println("Displaying All Movies");
 		return movieRepo.findAll();
 	}
 

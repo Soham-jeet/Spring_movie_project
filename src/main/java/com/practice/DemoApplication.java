@@ -23,13 +23,11 @@ public class DemoApplication {
 	@SuppressWarnings("unused")
 	public static void main(String[] args) {
 		AbstractApplicationContext context = (AbstractApplicationContext)SpringApplication.run(DemoApplication.class, args);
-	    
-		
 		MovieService service = (MovieService)context.getBean("movieservice");
 		//Insert 
 		MovieDTO dto = new MovieDTO("BNC",LocalDate.now(),LocalDateTime.now());
 		List<DirectorDTO> directorList = Arrays.asList(
-				new DirectorDTO("rst", "hgr", "Bihar","rst@infy.com",9007567890L),
+				new DirectorDTO("rst", "hgr", "West Bengal","rst@outlook.com",9007567890L),
 				new DirectorDTO("xyz","wyz","Mysore","john@infosys.com",9412340645L)
 				);
         service.searchBasedOnTitle("ABC");
